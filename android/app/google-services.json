@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1041021761502",
+    "project_id": "cell-personality",
+    "storage_bucket": "cell-personality.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1041021761502:android:93d3eeb7986ea28ee2cf4f",
+        "android_client_info": {
+          "package_name": "com.example.personality_tester"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1041021761502-4vj0pqg3kkf2bjmtvtodu8s577c3kihr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXT-Vv46vJkOSH-mEYEJrQbsnwczrRCRs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1041021761502-4vj0pqg3kkf2bjmtvtodu8s577c3kihr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
