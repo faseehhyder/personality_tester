@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:personality_tester/home.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:personality_tester/tests/big_five/about.dart';
-import 'package:personality_tester/tests/big_five/quiz.dart';
+import 'package:personality_tester/about.dart';
 import 'package:personality_tester/utils.dart';
 import 'register.dart';
 import 'login.dart';
 import 'auth.dart';
+import 'big_five.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,13 +24,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       scaffoldMessengerKey: Utils.messengerKey,
       debugShowCheckedModeBanner: false,
-      initialRoute: 'auth',
+      initialRoute: 'quiz',
       routes: {
         'auth' : (context) =>  const AuthPage(),
         'login' : (context) => const LoginPage(),
         'register' : (context) => const RegisterPage(),
         'home' : (context) => const HomePage(),
         'about_big_five' : (context) => const BigFiveAbout(),
+        'quiz' : (context) => const BigFive(),
       },
       navigatorKey: navigatorKey,
     );

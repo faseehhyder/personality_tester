@@ -12,15 +12,12 @@ class RegisterPage extends StatefulWidget {
   State<RegisterPage> createState() => _RegisterPageState();
 }
 
-class _RegisterPageState extends State<RegisterPage>
-{
-
+class _RegisterPageState extends State<RegisterPage> {
   final _formKey = GlobalKey<FormState>();
   final _emailController = TextEditingController();
   final _usernameController = TextEditingController();
   final _passwordController = TextEditingController();
   final _confirmPasswordController = TextEditingController();
-
 
   Future register() async {
     final isValid = _formKey.currentState!.validate();
@@ -48,6 +45,7 @@ class _RegisterPageState extends State<RegisterPage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFF0D1520),
       body: SingleChildScrollView(
         child: Center(
           child: Container(
@@ -68,13 +66,16 @@ class _RegisterPageState extends State<RegisterPage>
                         const Text(
                           "Sign Up",
                           style: TextStyle(
-                              fontSize: 35, fontWeight: FontWeight.bold),
+                              fontSize: 35,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0XFFB5B5B5),),
                         ),
                         const Text(
                           "to register an account",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 25,
+                              color: Color(0XFFB5B5B5),
                           ),
                         ),
                         const SizedBox(
@@ -94,7 +95,7 @@ class _RegisterPageState extends State<RegisterPage>
                         Radius.circular(10.0),
                       )),
                       filled: true,
-                      fillColor: Colors.white30,
+                      fillColor: Color(0XFFF0EFFF),
                       labelText: "Email",
                       hintText: "Enter a valid E-mail address",
                     ),
@@ -111,7 +112,7 @@ class _RegisterPageState extends State<RegisterPage>
                           ),
                         ),
                         filled: true,
-                        fillColor: Colors.white30,
+                        fillColor: Color(0XFFF0EFFF),
                         labelText: "Enter unique username",
                         hintText: "Create Username"),
                   ),
@@ -128,7 +129,7 @@ class _RegisterPageState extends State<RegisterPage>
                           ),
                         ),
                         filled: true,
-                        fillColor: Colors.white30,
+                        fillColor: Color(0XFFF0EFFF),
                         labelText: "Password",
                         hintText: "Enter your password"),
                   ),
@@ -145,7 +146,7 @@ class _RegisterPageState extends State<RegisterPage>
                           ),
                         ),
                         filled: true,
-                        fillColor: Colors.white30,
+                        fillColor: Color(0XFFF0EFFF),
                         labelText: "Confirm Password",
                         hintText: "Enter your password again"),
                   ),
@@ -157,7 +158,7 @@ class _RegisterPageState extends State<RegisterPage>
                     height: 55,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.black,
+                        primary: Color(0xFF03B881),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
@@ -177,7 +178,12 @@ class _RegisterPageState extends State<RegisterPage>
                   ),
                   const TextButton(
                     onPressed: null,
-                    child: Text("or continue with"),
+                    child: Text(
+                      "or continue with",
+                      style: TextStyle(
+                        color: Color(0XFFB5B5B5),
+                      ),
+                    ),
                   ),
                   const SizedBox(
                     height: 15,
@@ -187,15 +193,24 @@ class _RegisterPageState extends State<RegisterPage>
                     children: [
                       IconButton(
                         onPressed: () => print("Google"),
-                        icon: const FaIcon(FontAwesomeIcons.google),
+                        icon: const FaIcon(
+                          FontAwesomeIcons.google,
+                          color: Color(0XFFB5B5B5),
+                        ),
                       ),
                       IconButton(
                         onPressed: () => print("Facebook"),
-                        icon: const FaIcon(FontAwesomeIcons.facebook),
+                        icon: const FaIcon(
+                          FontAwesomeIcons.facebook,
+                          color: Color(0XFFB5B5B5),
+                        ),
                       ),
                       IconButton(
                         onPressed: () => print("Apple"),
-                        icon: const FaIcon(FontAwesomeIcons.apple),
+                        icon: const FaIcon(
+                          FontAwesomeIcons.apple,
+                          color: Color(0XFFB5B5B5),
+                        ),
                       ),
                     ],
                   )

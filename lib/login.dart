@@ -12,11 +12,9 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-
   final formKey = GlobalKey<FormState>();
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
-
 
   @override
   void dispose() {
@@ -32,8 +30,8 @@ class _LoginPageState extends State<LoginPage> {
         context: context,
         barrierDismissible: false,
         builder: (context) => Center(
-          child: CircularProgressIndicator(),
-        ));
+              child: CircularProgressIndicator(),
+            ));
     try {
       await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: _emailController.text.trim(),
@@ -51,7 +49,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xFF0D1520),
       body: SingleChildScrollView(
         child: Container(
           width: double.infinity,
@@ -71,14 +69,17 @@ class _LoginPageState extends State<LoginPage> {
                       const Text(
                         "Sign In",
                         style: TextStyle(
-                            fontSize: 35, fontWeight: FontWeight.bold,),
+                          fontSize: 35,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0XFFB5B5B5),
+                        ),
                       ),
                       const Text(
                         "to take different tests",
                         style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 25,
-                        ),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 25,
+                            color: Color(0XFFB5B5B5)),
                       ),
                       const SizedBox(
                         height: 10,
@@ -96,7 +97,7 @@ class _LoginPageState extends State<LoginPage> {
                         Radius.circular(10.0),
                       )),
                       filled: true,
-                      fillColor: Colors.white30,
+                      fillColor: Color(0XFFF0EFFF),
                       labelText: "Email",
                       hintText: "Enter registered email or username"),
                 ),
@@ -111,7 +112,7 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
                       filled: true,
-                      fillColor: Colors.white30,
+                      fillColor: Color(0XFFF0EFFF),
                       labelText: "Passowrd",
                       hintText: "Enter your password"),
                 ),
@@ -122,7 +123,12 @@ class _LoginPageState extends State<LoginPage> {
                   alignment: Alignment.centerRight,
                   child: TextButton(
                     onPressed: () => print("Forgot Password Button"),
-                    child: const Text("Forgot Password?"),
+                    child: const Text(
+                      "Forgot Password?",
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                    ),
                   ),
                 ),
                 SizedBox(
@@ -133,7 +139,7 @@ class _LoginPageState extends State<LoginPage> {
                   height: 55,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.black,
+                      primary: Color(0xFF03B881),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
@@ -153,7 +159,12 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 const TextButton(
                   onPressed: null,
-                  child: Text("or continue with"),
+                  child: Text(
+                    "or continue with",
+                    style: TextStyle(
+                      color: Color(0XFFB5B5B5),
+                    ),
+                  ),
                 ),
                 const SizedBox(
                   height: 15,
@@ -163,15 +174,24 @@ class _LoginPageState extends State<LoginPage> {
                   children: [
                     IconButton(
                       onPressed: () => print("Google"),
-                      icon: const FaIcon(FontAwesomeIcons.google),
+                      icon: const FaIcon(
+                        FontAwesomeIcons.google,
+                        color: Color(0XFFB5B5B5),
+                      ),
                     ),
                     IconButton(
                       onPressed: () => print("Facebook"),
-                      icon: const FaIcon(FontAwesomeIcons.facebook),
+                      icon: const FaIcon(
+                        FontAwesomeIcons.facebook,
+                        color: Color(0XFFB5B5B5),
+                      ),
                     ),
                     IconButton(
                       onPressed: () => print("Apple"),
-                      icon: const FaIcon(FontAwesomeIcons.apple),
+                      icon: const FaIcon(
+                        FontAwesomeIcons.apple,
+                        color: Color(0XFFB5B5B5),
+                      ),
                     ),
                   ],
                 )

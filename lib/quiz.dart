@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'question.dart';
 import 'answer.dart';
 
-class BigFiveQuiz extends StatelessWidget
+class Quiz extends StatelessWidget
 {
 
   final Function answerQuestion;
@@ -10,7 +10,7 @@ class BigFiveQuiz extends StatelessWidget
   final int questionIndex;
 
 
-  BigFiveQuiz({
+  Quiz({
     required this.answerQuestion,
     required this.questions,
     required this.questionIndex,

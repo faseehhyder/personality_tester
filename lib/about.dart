@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -9,22 +9,35 @@ class BigFiveAbout extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.black,
-        ),
         body: Container(
           width: double.infinity,
-          margin: EdgeInsets.symmetric(
-            horizontal: 5,
-            vertical: 15,
-          ),
+          height: double.infinity,
+          color: Color(0xFF0D1520),
           child: Column(
             children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  vertical: 20,
+                  horizontal: 20,
+                ),
+                child: Container(
+                  alignment: Alignment.centerLeft,
+                  child: IconButton(
+                    icon: Icon(
+                      FontAwesomeIcons.angleLeft,
+                      size: 30,
+                      color: Color(0XFFB5B5B5),
+                    ),
+                    onPressed: () => Navigator.pushNamed(context, 'home'),
+                  ),
+                ),
+              ),
               Text(
                 "Understand your personality",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 25,
+                  color: Colors.white,
                 ),
               ),
               SizedBox(
@@ -35,6 +48,7 @@ class BigFiveAbout extends StatelessWidget {
                 style: TextStyle(
                   fontStyle: FontStyle.italic,
                   fontSize: 20,
+                  color: Color(0XFFB5B5B5),
                 ),
               ),
               SizedBox(
@@ -47,26 +61,44 @@ class BigFiveAbout extends StatelessWidget {
                     children: [
                       FaIcon(
                         FontAwesomeIcons.circleInfo,
+                        color: Color(0xFF03B881),
                       ),
                       SizedBox(
                         width: 10,
                       ),
-                      Text("50 Questions"),
+                      Text(
+                        "50 Questions",
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ],
                   ),
                   Row(
                     children: [
-                      FaIcon(FontAwesomeIcons.clock),
+                      FaIcon(
+                        FontAwesomeIcons.solidClock,
+                        color: Color(0xFF03B881),
+                      ),
                       SizedBox(
                         width: 10,
                       ),
-                      Text("+5 Minutes"),
+                      Text(
+                        "+5 Minutes",
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ],
                   ),
                 ],
               ),
               SizedBox(
                 height: 20,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 15),
+                child: DottedLine(
+                  direction: Axis.horizontal,
+                  lineLength: double.infinity,
+                  dashColor: Colors.white,
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -78,13 +110,13 @@ class BigFiveAbout extends StatelessWidget {
                       children: [
                         Container(
                           decoration: BoxDecoration(
-                            color: Colors.blue.withOpacity(0.5),
+                            color: Color(0XFFB8D3FF),
                             borderRadius: BorderRadius.circular(
                               10,
                             ),
                             border: Border.all(
                                 width: 2,
-                                color: Colors.black87,
+                                color: Colors.white,
                                 style: BorderStyle.solid),
                           ),
                           child: Padding(
@@ -92,14 +124,14 @@ class BigFiveAbout extends StatelessWidget {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
+                                const Text(
                                   "About Assessment",
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 20,
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 10,
                                 ),
                                 const Text(
@@ -118,13 +150,13 @@ class BigFiveAbout extends StatelessWidget {
                         ),
                         Container(
                           decoration: BoxDecoration(
-                            color: Colors.yellow.withOpacity(0.5),
+                            color: Color(0XFFFFDA6E),
                             borderRadius: BorderRadius.circular(
                               10,
                             ),
                             border: Border.all(
                                 width: 2,
-                                color: Colors.black87,
+                                color: Colors.white,
                                 style: BorderStyle.solid),
                           ),
                           child: Padding(
@@ -161,7 +193,7 @@ class BigFiveAbout extends StatelessWidget {
                           height: 55,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              primary: Colors.black,
+                              primary: Color(0xFF03B881),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10),
                               ),
